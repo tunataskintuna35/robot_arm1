@@ -9,6 +9,7 @@ int pos = 0;    // variable to store the servo position
 void setup() 
 {
   myservo.attach(10);
+  servo2.attach(9);
 }
 
 void loop() 
