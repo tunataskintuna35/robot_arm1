@@ -17,7 +17,7 @@ void loop()
     gripper_on();
     arm_down();
     gripper_off();
-    arm_on();
+    arm_up();
  
 }
 
