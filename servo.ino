@@ -14,7 +14,10 @@ void setup()
 
 void loop() 
 {
-  
+    gripper_on();
+    arm_down();
+    gripper_off();
+    arm_on();
  
 }
 
