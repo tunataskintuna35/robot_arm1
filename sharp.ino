@@ -31,13 +31,14 @@ void loop()
         serial.println(_sharp3);
         
         
-        serial.println(lenght(_sharp1))
-
+        float temp=lenght(_sharp1)
+        serial.println(temp);
 }
 
 float lenght(float voltage)
 {
     volts=(float)voltage * VOLTS_PER_UNIT;
     cm=60.495 * pow(volts,-1.1904);
+    return cm;
 }
  
