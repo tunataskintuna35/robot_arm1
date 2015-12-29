@@ -23,12 +23,12 @@ void loop()
         _sharp2=analogRead(sharp2);
         _sharp3=analogRead(sharp3);
   
-        Serial.println("Sensor1 value:");
-        Serial.println(_sharp1);
-        Serial.println("Sensor2 value:");
-        Serial.println(_sharp2);
-        Serial.println("Sensor3 value:");
-        Serial.println(_sharp3);
+        //Serial.println("Sensor1 value:");
+        //Serial.println(_sharp1);
+        //Serial.println("Sensor2 value:");
+        //Serial.println(_sharp2);
+        //Serial.println("Sensor3 value:");
+        //Serial.println(_sharp3);
         
         
         float temp=lenght(_sharp1);
