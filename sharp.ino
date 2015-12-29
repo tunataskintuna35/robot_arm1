@@ -29,16 +29,15 @@ void loop()
         serial.println(_sharp2);
         serial.println("Sensor3 value:");
         serial.println(_sharp3);
-        volts = (float)proxSens * VOLTS_PER_UNIT; // ("proxSens" is from analog read)
-        cm = 60.495 * pow(volts,-1.1904);     // same in cm
- 
- 
+        
+        
+        serial.println(lenght(_sharp1))
+
 }
 
 float lenght(float voltage)
 {
- 
-    
-  
+    volts=(float)voltage * VOLTS_PER_UNIT;
+    cm=60.495 * pow(volts,-1.1904);
 }
  
