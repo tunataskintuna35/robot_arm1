@@ -1,8 +1,8 @@
 #include <Servo.h>
 
-Servo servo1;
-Servo servo2;
-Servo servo3;
+Servo servo1;                       //gripper servosu
+Servo servo2;                       //1. eklem 
+Servo servo3;                       //2. eklem
 
 int pos = 0;    // variable to store the servo position
 
