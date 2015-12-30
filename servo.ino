@@ -16,14 +16,13 @@ void setup()
 void loop() 
 {
     gripper_on();
+    arm_up();
+    eklem_up();
+    delay(1000);
     arm_down();
     gripper_off();
-    arm_up();
-    gripper_on();
-    arm_down();
-    gripper_off();
-    arm_up();
- 
+    eklem_down();
+  
 }
 
 void gripper_on()
