@@ -92,6 +92,7 @@ void eklem_up()
     servo3.write(temp);              // tell servo to go to position in variable 'pos'
     delay(30);         
 }
+}
 void eklem_down()
 {
   for (int temp = 180; temp >= 0; temp -= 1) 
