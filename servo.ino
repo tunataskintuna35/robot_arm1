@@ -1,15 +1,16 @@
 #include <Servo.h>
 
-Servo myservo;
+Servo servo1;
 Servo servo2;
-
+Servo servo3;
 
 int pos = 0;    // variable to store the servo position
 
 void setup() 
 {
-  myservo.attach(10);
-  servo2.attach(9);
+  servo1.attach(9);
+  servo2.attach(10);
+  servo3.attach(11);
 }
 
 void loop() 
@@ -29,7 +30,7 @@ void gripper_on()
 {
   for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    servo1.write(pos);              // tell servo to go to position in variable 'pos'
     delay(30);                       // waits 30ms for the servo to reach the position
   }
 }
@@ -37,7 +38,7 @@ void gripper_on()
 void gripper_off()
 {
    for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    servo1.write(pos);              // tell servo to go to position in variable 'pos'
     delay(30);                       // waits 30ms for the servo to reach the position
   }
 }
