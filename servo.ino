@@ -58,3 +58,18 @@ void arm_down()
     delay(30);                       // waits 30ms for the servo to reach the position
   }
 }
+void eklem_up()
+{
+ for (int temp = 0; temp <= 180; temp += 1) 
+  { // goes from 180 degrees to 0 degrees
+    servo3.write(temp);              // tell servo to go to position in variable 'pos'
+    delay(30);         
+}
+void eklem_down()
+{
+  for (int temp = 180; temp >= 0; temp -= 1) 
+  { // goes from 180 degrees to 0 degrees
+    servo3.write(temp);              // tell servo to go to position in variable 'pos'
+    delay(30);                       // waits 30ms for the servo to reach the position
+  }
+}
