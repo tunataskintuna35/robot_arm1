@@ -6,7 +6,13 @@ Servo servo3;                       //2. eklem
 
 int sharp1=A0;
 int sharp2=A1;
-int sharp3=A2;
+int sharp3=A2;int 
+int motorPin1 = 3;
+int motorPin2 = 4;
+int motorPin3 = 5;
+int motorPin4 = 6;
+int delayTime = 500;
+
 
 float _sharp1;
 float _sharp2;
@@ -25,31 +31,47 @@ void setup()
   servo1.attach(9);
   servo2.attach(10);
   servo3.attach(11);
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(motorPin3, OUTPUT);
+  pinMode(motorPin4, OUTPUT);
+  konum_al();
 }
 
 void loop() 
-{
-    gripper_on();
-    arm_up();
-    eklem_up();
-    delay(1000);
-    arm_down();
-    gripper_off();
-    eklem_down();
+{   
+    float temp=lenght(_sharp1);
     _sharp1=analogRead(sharp1);
     _sharp2=analogRead(sharp2);
     _sharp3=analogRead(sharp3);
   
-        //Serial.println("Sensor1 value:");
-        //Serial.println(_sharp1);
-        //Serial.println("Sensor2 value:");
-        //Serial.println(_sharp2);
-        //Serial.println("Sensor3 value:");
-        //Serial.println(_sharp3);
-        
-        
+    if(_sharp1<=5||_sharp2<=7||_sharp<=10)
+          engel_kaldır();  
+    _sharp1=analogRead(sharp1);
+    _sharp2=analogRead(sharp2);
+    _sharp3=analogRead(sharp3);
+  
+  
     float temp=lenght(_sharp1);
-    Serial.println(temp);
+    
+  //--------------------------------------------------------------------------------------------------------
+}
+void konum_al()
+{
+  gripper_off();
+  
+}
+void engel_kaldir()
+{
+  gripper_on();
+  arm_down();
+  eklem_down();
+  //step motor ekle
+  delay(100);
+  
+}
+void geri_gel()
+{
   
 }
 
