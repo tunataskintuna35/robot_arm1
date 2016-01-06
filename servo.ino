@@ -46,13 +46,18 @@ void loop()
     _sharp3=analogRead(sharp3);
   
     if(_sharp1<=5||_sharp2<=7||_sharp<=10)
-          engel_kaldır();  
-    _sharp1=analogRead(sharp1);
-    _sharp2=analogRead(sharp2);
-    _sharp3=analogRead(sharp3);
+          engel_kaldir();
+    if(_sharp1>=5||_sharp2>=7||_sharp<=10)
+          engel_kaldir();
+    if(_sharp1>=5||_sharp2>=7||_sharp>=10)
+          engel_kaldir();
+          
+    
+          
+    
   
   
-    float temp=lenght(_sharp1);
+    //float temp=lenght(_sharp1);
     
   //--------------------------------------------------------------------------------------------------------
 }
@@ -66,6 +71,7 @@ void engel_kaldir()
   gripper_on();
   arm_down();
   eklem_down();
+  gripper_off();
   //step motor ekle
   delay(100);
   
